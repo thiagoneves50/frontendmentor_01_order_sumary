@@ -1,0 +1,159 @@
+:root {
+	--primary-pale-blue: hsl(225, 100%, 94%);
+	--primary-bright-blue: hsl(245, 75%, 52%);
+	--neutral-very-pale-blue: hsl(225, 100%, 98%);
+	--neutral-desaturated-blue: hsl(224, 23%, 55%);
+	--neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+	background: url(images/pattern-background-desktop.svg) no-repeat top
+		center/cover;
+	background-color: var(--primary-pale-blue);
+}
+
+p {
+	color: var(--neutral-desaturated-blue);
+}
+
+li {
+	list-style: none;
+}
+
+/* Utilities -----------------------------------------------*/
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.8rem 6rem;
+	border-radius: 10px;
+}
+
+#card {
+	width: 400px;
+	margin: auto auto;
+	height: 630px;
+	background-color: #fff;
+	border-radius: 15px;
+	overflow: hidden;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Order Summary ----------------------------------------------------*/
+#card .showcase-imgage img {
+	width: 100%;
+}
+
+#card .order-sumary {
+	text-align: center;
+	margin: 2rem 3rem 1rem;
+}
+
+#card .order-sumary h1 {
+	margin-bottom: 1rem;
+	font-weight: 900;
+}
+
+#card .order-sumary p {
+	line-height: 1.5;
+}
+
+/* Plan ------------------------------------------------------------- */
+.plan {
+	background-color: var(--neutral-very-pale-blue);
+	margin: 0 2.5rem 2rem;
+	padding: 1.2rem;
+	border-radius: 10px;
+}
+
+.plan ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.plan ul ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.plan img {
+	width: 90%;
+}
+
+.plan ul h3 {
+	font-size: 0.92rem;
+	font-weight: 900;
+}
+
+.plan ul p {
+	font-size: 0.94rem;
+}
+
+.plan ul ul li:first-child {
+	margin-right: 1rem;
+}
+
+.plan a {
+	color: var(--primary-bright-blue);
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+/* Payment ----------------------------------------------------*/
+.payment {
+	text-align: center;
+}
+
+.payment a {
+	color: var(--primary-pale-blue);
+	font-weight: 700;
+	font-size: 0.85rem;
+	background: var(--primary-bright-blue);
+	margin-bottom: 1.5rem;
+	box-shadow: 2px 15px 12px 6px rgba(13, 13, 245, 0.15);
+}
+
+.payment p {
+	font-size: 0.84rem;
+	font-weight: 700;
+}
+
+/* Media---------------------------------------------------- */
+@media (max-width: 375px) {
+	#card {
+		width: 330px;
+		height: 570px;
+	}
+
+	#card .order-sumary {
+		margin: 2rem 2rem 1.2rem;
+	}
+
+	.plan {
+		margin: 0 1.5rem 1.5rem;
+		padding: 1.2rem;
+	}
+
+	.btn {
+		padding: 1rem 4rem;
+	}
+
+	.payment p {
+		font-size: 0.95rem;
+		font-weight: 700;
+	}
+}
